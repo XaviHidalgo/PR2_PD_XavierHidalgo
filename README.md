@@ -5,7 +5,7 @@
 ### Practica A interrupción por GPIO
 
 
-* PROGRAMA: *
+*** PROGRAMA: ***
 
 ``` cpp
 #include <Arduino.h>
