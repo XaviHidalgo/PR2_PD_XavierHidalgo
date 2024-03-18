@@ -128,10 +128,15 @@ void loop() {
 
 En este programa seguimos usando interrupciones pero hemos cambiado el tipo de interrupción. Ahora usamos interrupciones de tipo temporizador o "timer" en vez de GPIO o de "pin de interrupción".
 
+
 Bien, el programa es muy sencillo, simplemente cada microsegundo (timepo modificable) se produce una interrupción automática. La acción que tomamos cada vez que se produce una interrupción, es decir, cada microsegundo, es sumar +1 a una variable llamada interruptCounter.
+
 Ojo! Esta es la acción que se ejecuta automáticamente cuando se produce una interrupción. Si recordais el ejercicio anterior, diferenciavamos entre las acciones que ejecutábamos cuando se producía una interrupción, lo que habia dentro de **ISR**, y las consecuencias que estas producian, que las podíamos ver dentro del **loop()** del programa.
+
 En este ejercicio pasa lo mismo, lo único es que la función ISR se ha pasado a llamar **onTimer**. Cuando se produce una interrupción llamamos a onTimer y esta suma +1 a la varibale nombrada anteriormente interruptCounter. Fijemonos en el void loop(), hay un if que se ejecutara cuando interruptCounter sea mayor que 0 y esto solo pasará cuando se produzca una interrupción (básicamente lo mismo que el ejercicio anterior). 
+
 Que se ejecuta dentro de este if? Pues sumaremos +1 a otra variable llamada totalInterruptCounter y restaremos +1 a la variable interruptCounter para que se pueda volver a ejecutar este if (como hacíamos en el ejercicio anterior pero en vez de con una variable booleana con una integer). Tambien enviaremos un mensaje por el puerto série que nos irá informando de cuantas interrupciones han ocurrido, esto lo hará gracias a totalInterruptCounter:
+
 ``` cpp
 Serial.print("An interrupt as occurred. Total number: ");
 Serial.println(totalInterruptCounter);
