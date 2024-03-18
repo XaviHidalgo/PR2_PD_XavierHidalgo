@@ -76,4 +76,4 @@ Serial.printf("Button 1 has been pressed "button1.numberKeyPresses" times");
 ```
 Para darle un uso almenos.
 
-Finalmentem, dentro del loop, encontramos un if que desactivará la interrupción pasado un minuto, entendemos que a parte de funcionar como un control de errores, es una forma de usar la función detachInterrupt.
+Finalmente, dentro del loop, encontramos un if que desactivará la interrupción pasado un minuto, entendemos que a parte de funcionar como un control de errores, es una forma de usar la función detachInterrupt.
