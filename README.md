@@ -92,6 +92,8 @@ Finalmente, dentro del loop, encontramos un if que desactivará la interrupción
 **PROGRAMA:**
 
 ``` cpp
+#include <Arduino.h>
+
 volatile int interruptCounter;
 int totalInterruptCounter;
 
@@ -141,4 +143,8 @@ Que se ejecuta dentro de este if? Pues sumaremos +1 a otra variable llamada tota
 Serial.print("An interrupt as occurred. Total number: ");
 Serial.println(totalInterruptCounter);
 ```
-
+Podemos modificar el tiempo en el que ocurre una interrupción en el 100000 de:
+``` cpp
+ timerAlarmWrite(timer, 1000000, true);
+```
+Como veis en este programa seguimos utilizando funciones propias de Arduino de interrupciones, solo que ahora de tipo timer (timerAttachInterrupt, timerAlarmWrite, timerAlarmEnable, etc).
