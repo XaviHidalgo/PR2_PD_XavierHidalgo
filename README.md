@@ -4,7 +4,8 @@
 
 ### Practica A interrupción por GPIO
 
-PROGRAMA:
+
+** PROGRAMA: **
 
 ``` cpp
 #include <Arduino.h>
@@ -45,8 +46,7 @@ void loop() {
   Serial.println("Interrupt Detached!");
   }
 }
-*/
-
-
-
 ```
+
+INFORME:
+
