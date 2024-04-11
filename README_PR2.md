@@ -50,7 +50,7 @@ void loop() {
 
 **INFORME:**
 
-El circuito a implementar en esta práctica consta de simplemente dos cables, uno conectado al pin 23 (como podria ser cualquier otro pin salida) y otro al pin GND (tierra) del MP.
+El circuito a implementar en esta práctica consta de simplemente dos cables, uno conectado al pin 23 (como podria ser cualquier otro pin GPIO (general propuse input/output)) y otro al pin GND (tierra) del MP.
 Al hacer contacto con los dos cables permitiremos que fluya corriente por ellos hecho que el MP entenderá como una interrupción. La función que nos permite que el MP entienda esta acción como una interrupción es:
 ``` cpp
 attachInterrupt(GPIOPin, ISR, Mode);
